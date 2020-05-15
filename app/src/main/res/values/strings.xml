@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">conf-booking</string>
+    <string name="app_name">TimeToMeet Bookings</string>
+    <string name="ttmlogo">ttmlogo</string>
 </resources>
