@@ -3,7 +3,9 @@ package com.example.conf_booking;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class Login extends Activity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Login extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState){

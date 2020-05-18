@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 sleep(2000);
 
-                Intent i = new Intent(getBaseContext(), Login.class);
+                Intent i = new Intent(getBaseContext(), MainMenu.class);
                 startActivity(i);
 
                 finish();
