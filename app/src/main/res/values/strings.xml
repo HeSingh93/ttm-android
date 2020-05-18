@@ -5,4 +5,6 @@
     <string name="newbooking">New Booking</string>
     <string name="viewbooking">View Booking</string>
     <string name="myProfile">My Profile</string>
+    <string name="login">Login</string>
+    <string name="SignUp">Sign Up</string>
 </resources>
