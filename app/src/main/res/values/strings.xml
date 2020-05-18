@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">TimeToMeet</string>
     <string name="ttmlogo">ttmlogo</string>
+    <string name="ttmInfo">ttmInfo</string>
     <string name="newbooking">New Booking</string>
     <string name="viewbooking">View Booking</string>
+    <string name="myProfile">My Profile</string>
 </resources>

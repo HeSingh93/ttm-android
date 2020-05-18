@@ -13,9 +13,6 @@
         android:layout_height="52dp"
         android:layout_marginBottom="1dp"
         android:background="#3C423B"
-        android:paddingLeft="33dp"
-        android:paddingTop="13dp"
-        android:paddingRight="33dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -27,8 +24,28 @@
             android:id="@+id/ttmlogo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="15dp"
             android:contentDescription="@string/ttmlogo"
             app:srcCompat="@drawable/ttmlogo" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="43dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="195dp"
+            android:layout_marginLeft="195dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:contentDescription="@string/ttmInfo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ttmlogo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_info_details" />
+
     </TableRow>
 
     <ViewFlipper
@@ -48,10 +65,12 @@
         android:queryHint="Type to search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/v_flipper"
-        app:layout_constraintVertical_bias="0.065" />
+        app:layout_constraintVertical_bias="0.089">
+
+    </SearchView>
 
     <Button
         android:id="@+id/newBooking"
@@ -66,7 +85,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchView"
-        app:layout_constraintVertical_bias="0.172" />
+        app:layout_constraintVertical_bias="0.076" />
 
     <Button
         android:id="@+id/viewBooking"
@@ -80,6 +99,20 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newBooking"
-        app:layout_constraintVertical_bias="0.278" />
+        app:layout_constraintVertical_bias="0.16" />
+
+    <Button
+        android:id="@+id/myProfile"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="226dp"
+        android:layout_height="48dp"
+        android:background="@drawable/button_background"
+        android:text="@string/myProfile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newBooking"
+        app:layout_constraintVertical_bias="0.605" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
