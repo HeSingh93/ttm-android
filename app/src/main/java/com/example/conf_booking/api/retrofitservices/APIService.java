@@ -17,7 +17,7 @@ public interface APIService {
 
     @POST("api-token-auth/")
     Call<TokenEntity> login(
-            @Body UserEntity player);
+            @Body UserEntity user);
 
 
     @POST("logout")
