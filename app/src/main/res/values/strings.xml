@@ -1,12 +1,25 @@
 <resources>
+
+    //headers
     <string name="app_name">TimeToMeet</string>
+    <string name="safe">Safe</string>
+    <string name="fast">Fast</string>
+    <string name="yourChoice">Your choice</string>
+
+    //images
     <string name="ttmlogo">ttmlogo</string>
     <string name="ttmInfo">ttmInfo</string>
+    <string name="ttmLoginBg">ttmLoginBg</string>
+    <string name="checkMark">check</string>
+
+    //buttons
     <string name="newbooking">New Booking</string>
     <string name="viewbooking">View Booking</string>
     <string name="myProfile">My Profile</string>
     <string name="login">Login</string>
     <string name="SignUp">Sign Up</string>
+
+    //input values
     <string name="first_name">First name</string>
     <string name="last_name">Last name</string>
     <string name="username">Username</string>
