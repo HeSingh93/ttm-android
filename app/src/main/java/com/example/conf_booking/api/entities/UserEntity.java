@@ -45,6 +45,16 @@ public class UserEntity implements Parcelable {
         // Empty no-args constructor
     }
 
+    public UserEntity(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
+
+
+
+    }
+
+
+
     public String getFirstName() {
         return firstName;
     }
