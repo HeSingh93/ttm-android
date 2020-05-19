@@ -68,7 +68,6 @@ public class Login extends AppCompatActivity {
 
         call.enqueue(new Callback<TokenEntity>() {
 
-
             @Override
             @EverythingIsNonNull
             public void onResponse(Call<TokenEntity> call, Response<TokenEntity> response) {
