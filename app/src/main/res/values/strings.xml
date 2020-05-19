@@ -2,9 +2,8 @@
 
     //headers
     <string name="app_name">TimeToMeet</string>
-    <string name="safe">Safe</string>
-    <string name="fast">Fast</string>
-    <string name="yourChoice">Your choice</string>
+    <string name="loginHeader">Safe Fast </string>
+    <string name="loginHeader2"> Your choice </string>
 
     //images
     <string name="ttmlogo">ttmlogo</string>
