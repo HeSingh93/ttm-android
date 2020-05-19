@@ -15,7 +15,7 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-        int images[] = new int[]{R.drawable.rum1, R.drawable.rum2, R.drawable.rum3, R.drawable.rum4};
+        int[] images = new int[]{R.drawable.rum1, R.drawable.rum2, R.drawable.rum3, R.drawable.rum4};
 
         v_flipper = findViewById(R.id.v_flipper);
 
