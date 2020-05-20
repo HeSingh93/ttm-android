@@ -11,14 +11,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class RetrofitHelper {
 
-    private static final String BASE_URL = "http://dev-be.timetomeet.se/service/rest/";
+    private static final String BASE_URL = "https://dev-be.timetomeet.se/service/rest/";
 
     private static Retrofit getRetrofitBuild() {
         Gson gson = new GsonBuilder()
                 .setLenient()
                 .create();
-
-
 
         return new Retrofit.Builder()
                 .baseUrl(BASE_URL)

@@ -12,6 +12,8 @@ import com.example.conf_booking.api.entities.TokenEntity;
 import com.example.conf_booking.api.entities.UserEntity;
 import com.example.conf_booking.api.retrofitservices.RetrofitHelper;
 
+import java.io.IOException;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -45,7 +47,6 @@ public class Login extends AppCompatActivity {
         });
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 loginButtonPressed(view);
@@ -60,8 +61,8 @@ public class Login extends AppCompatActivity {
 
     public void loginButtonPressed(final View view) {
 
-        String userName = usernameTextEdit.getText().toString();
-        String password = passwordTextEdit.getText().toString();
+        String userName = usernameTextEdit.getText().toString().trim();
+        String password = passwordTextEdit.getText().toString().trim();
 
         UserEntity newUser = new UserEntity(userName, password);
         Call<TokenEntity> call = RetrofitHelper.getAPIService().login(newUser);
@@ -69,7 +70,6 @@ public class Login extends AppCompatActivity {
         call.enqueue(new Callback<TokenEntity>() {
 
             @Override
-            @EverythingIsNonNull
             public void onResponse(Call<TokenEntity> call, Response<TokenEntity> response) {
                 TokenEntity body = response.body();
 
@@ -81,7 +81,7 @@ public class Login extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else {
-                    //TODO Add error message
+                System.out.println("No token entity received, try again!");
                 }
 
             }
