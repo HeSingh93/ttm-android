@@ -1,5 +1,6 @@
 package com.example.conf_booking.api.retrofitservices;
 
+import com.example.conf_booking.api.entities.SearchEntity;
 import com.example.conf_booking.api.entities.TokenEntity;
 import com.example.conf_booking.api.entities.UserEntity;
 
@@ -26,6 +27,9 @@ public interface APIService {
     @POST("logout/")
     Call<String> logout(
             @Header("Token") String token);
+
+    @POST("search/availability/period/v3")
+    Call<SearchEntity> createSearch (@Body SearchEntity search);
 
 
 }

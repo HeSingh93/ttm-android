@@ -3,15 +3,21 @@ package com.example.conf_booking.api.entities;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.gson.annotations.SerializedName;
+
 
 public class SearchEntity implements Parcelable {
 
+    @SerializedName("object_id")
     private String objectId;
 
+    @SerializedName("object_type")
     private String objectType;
 
+    @SerializedName("from_date")
     private String fromDate;
 
+    @SerializedName("to_date")
     private String toDate;
 
     //----- Constructors -----//
