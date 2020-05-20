@@ -43,7 +43,7 @@ public class SignUp extends AppCompatActivity {
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                signupButtonPressed(view);
+                signUpButtonPressed(view);
             }
         });
 
@@ -61,7 +61,7 @@ public class SignUp extends AppCompatActivity {
     }
 
 
-    public void signupButtonPressed(final View view) {
+    public void signUpButtonPressed(final View view) {
 
         UserEntity newUser = new UserEntity();
 

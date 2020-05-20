@@ -31,4 +31,8 @@
     <string name="street">Street</string>
     <string name="city">City</string>
     <string name="phone_number">Phone number</string>
+    <string name="object_id">Object Id</string>
+    <string name="object_type">Object Type</string>
+    <string name="from_date">From (date)</string>
+    <string name="to_date">To (date)</string>
 </resources>
