@@ -20,16 +20,29 @@ public class SearchEntity implements Parcelable {
     @SerializedName("to_date")
     private String toDate;
 
+
     //----- Constructors -----//
     public SearchEntity() {
         // Empty no-args constructor
     }
+
 
     public SearchEntity(String objectId, String objectType, String fromDate, String toDate) {
         this.objectId = objectId;
         this.objectType = objectType;
         this.fromDate = fromDate;
         this. toDate = toDate;
+    }
+
+
+    @Override
+    public String toString() {
+        return "SearchEntity{" +
+                "objectId='" + objectId + '\'' +
+                ", objectType='" + objectType + '\'' +
+                ", fromDate='" + fromDate + '\'' +
+                ", toDate='" + toDate + '\'' +
+                '}';
     }
 
     public String getObjectId() {

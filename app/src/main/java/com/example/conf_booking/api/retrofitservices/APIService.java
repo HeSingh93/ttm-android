@@ -29,7 +29,9 @@ public interface APIService {
             @Header("Token") String token);
 
     @POST("search/availability/period/v3")
-    Call<SearchEntity> createSearch (@Body SearchEntity search);
+    Call<SearchEntity> createSearch (
+            @Body SearchEntity search);
+
 
 
 }
