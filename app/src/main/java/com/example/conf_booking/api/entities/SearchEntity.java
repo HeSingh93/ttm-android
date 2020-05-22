@@ -8,16 +8,16 @@ import com.google.gson.annotations.SerializedName;
 
 public class SearchEntity implements Parcelable {
 
-    @SerializedName("object_id")
+    @SerializedName("objectIds")
     private String objectId;
 
-    @SerializedName("object_type")
+    @SerializedName("objectType")
     private String objectType;
 
-    @SerializedName("from_date")
+    @SerializedName("fromDate")
     private String fromDate;
 
-    @SerializedName("to_date")
+    @SerializedName("toDate")
     private String toDate;
 
 

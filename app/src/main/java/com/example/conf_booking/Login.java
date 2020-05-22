@@ -12,13 +12,10 @@ import com.example.conf_booking.api.entities.TokenEntity;
 import com.example.conf_booking.api.entities.UserEntity;
 import com.example.conf_booking.api.retrofitservices.RetrofitHelper;
 
-import java.io.IOException;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.internal.EverythingIsNonNull;
+
 
 public class Login extends AppCompatActivity {
 
@@ -88,7 +85,7 @@ public class Login extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<TokenEntity> call, Throwable t) {
-
+                //TODO Add error handling here
             }
         });
 

@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.content.Intent;
 
 import com.example.conf_booking.api.entities.SearchEntity;
+import com.example.conf_booking.api.entities.SearchResponseEntity;
 import com.example.conf_booking.api.retrofitservices.RetrofitHelper;
 
 import java.util.ArrayList;
@@ -72,15 +73,19 @@ public class Search extends AppCompatActivity {
         String toDate = toDateTextEdit.getText().toString().trim();
 
         SearchEntity newSearch = new SearchEntity(objectId,objectType,fromDate,toDate);
+        System.out.println(newSearch.toString());
 
-        Call<SearchEntity> call = RetrofitHelper.getAPIService().createSearch(newSearch);
-        call.enqueue(new Callback<SearchEntity>() {
+        Call<SearchResponseEntity> call = RetrofitHelper.getAPIService().createSearch(newSearch);
+        System.out.println(call.request().toString());
+        call.enqueue(new Callback<SearchResponseEntity>() {
 
             @Override
             @EverythingIsNonNull
-            public void onResponse(Call<SearchEntity> call, Response<SearchEntity> response) {
-               SearchEntity body = response.body();
-                System.out.println(response.toString());
+            public void onResponse(Call<SearchResponseEntity> call, Response<SearchResponseEntity> response) {
+                SearchResponseEntity body = response.body();
+                System.out.println("Test 1: " + response.toString());
+                System.out.println("Test 2: " + response.body().toString());
+                System.out.println("Test 3: " + response.raw().toString());
 
               if(body != null){
                   Intent intent = new Intent(view.getContext(), Search.class);
@@ -107,7 +112,7 @@ public class Search extends AppCompatActivity {
 
 
             @Override
-            public void onFailure(Call<SearchEntity> call, Throwable t) {
+            public void onFailure(Call<SearchResponseEntity> call, Throwable t) {
                 System.out.println("ERROR! WRONG! U SUCK!");
                 t.printStackTrace();
 
