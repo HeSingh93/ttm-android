@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.content.Intent;
 
+import com.example.conf_booking.api.entities.AvailabilityEntity;
 import com.example.conf_booking.api.entities.SearchEntity;
 import com.example.conf_booking.api.entities.SearchResponseEntity;
 import com.example.conf_booking.api.retrofitservices.RetrofitHelper;
@@ -36,6 +37,7 @@ public class Search extends AppCompatActivity {
 
     TextView resultsTextView;
     ListView resultsListView;
+    SearchResponseEntity responseEntity;
 
     EditText objectIdTextEdit,
             objectTypeTextEdit,
@@ -83,6 +85,7 @@ public class Search extends AppCompatActivity {
             @EverythingIsNonNull
             public void onResponse(Call<SearchResponseEntity> call, Response<SearchResponseEntity> response) {
                 SearchResponseEntity body = response.body();
+
                 System.out.println("Test 1: " + response.toString());
                 System.out.println("Test 2: " + response.body().toString());
                 System.out.println("Test 3: " + response.raw().toString());
@@ -91,14 +94,12 @@ public class Search extends AppCompatActivity {
                   Intent intent = new Intent(view.getContext(), Search.class);
                   intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                   intent.putExtra("Search", body);
-                  List<String> list = new ArrayList<>();
 
-                  list.add(body.toString());
-
-                  adapter = new ArrayAdapter<String>(
+                  adapter = new ArrayAdapter<AvailabilityEntity>(
                           getBaseContext(),
                           android.R.layout.simple_list_item_1,
-                          list);
+                          body.getSearchResult()
+                          );
 
                   resultsListView.setAdapter(adapter);
 
