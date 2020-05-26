@@ -56,7 +56,7 @@ public class Search extends AppCompatActivity {
         objectTypeTextEdit = findViewById(R.id.objectType);
         fromDateTextEdit = findViewById(R.id.fromDate);
         toDateTextEdit = findViewById(R.id.toDate);
-        resultsListView = findViewById(R.id.resultsLV);
+        resultsListView = findViewById(R.id.resultLV);
 
         search = findViewById(R.id.searchBtn);
         search.setOnClickListener(new View.OnClickListener() {
@@ -86,10 +86,6 @@ public class Search extends AppCompatActivity {
             public void onResponse(Call<SearchResponseEntity> call, Response<SearchResponseEntity> response) {
                 SearchResponseEntity body = response.body();
 
-                System.out.println("Test 1: " + response.toString());
-                System.out.println("Test 2: " + response.body().toString());
-                System.out.println("Test 3: " + response.raw().toString());
-
               if(body != null){
                   Intent intent = new Intent(view.getContext(), Search.class);
                   intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -99,9 +95,10 @@ public class Search extends AppCompatActivity {
                           getBaseContext(),
                           android.R.layout.simple_list_item_1,
                           body.getSearchResult()
-                          );
+                  );
 
                   resultsListView.setAdapter(adapter);
+
 
                   System.out.println(body.toString());
 

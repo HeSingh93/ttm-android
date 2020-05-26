@@ -122,9 +122,9 @@ public class AvailabilityEntity implements Parcelable {
     @Override
     public String toString() {
         return "AvailabilityEntity{" +
-                "fullDayPrice='" + fullDayPrice + '\'' +
-                ", morningPrice='" + morningPrice + '\'' +
-                ", afternoonPrice='" + afternoonPrice + '\'' +
+                "fullDayPrice='" + fullDayPrice + " kr" + '\'' +
+                ", morningPrice='" + morningPrice + " kr" + '\'' +
+                ", afternoonPrice='" + afternoonPrice + " kr "+ '\'' +
                 ", startDate='" + startDate + '\'' +
                 ", bookedMorning=" + bookedMorning +
                 ", bookedAfternoon=" + bookedAfternoon +

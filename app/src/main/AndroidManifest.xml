@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".SearchResult"></activity>
+        <activity android:name=".GetCity"></activity>
+        <activity android:name=".City" />
+        <activity android:name=".SearchResult" />
         <activity android:name=".Search" />
         <activity android:name=".MyProfile" />
         <activity android:name=".ViewBooking" />
